@@ -8,6 +8,7 @@ module.exports = {
     'prettier/react',
     'prettier/@typescript-eslint',
     'plugin:prettier/recommended',
+    'plugin:import/typescript',
   ],
   plugins: ['react', '@typescript-eslint', 'jest'],
   env: {
@@ -27,16 +28,48 @@ module.exports = {
     ecmaVersion: 2018,
     sourceType: 'module',
     project: './tsconfig.json',
+    createDefaultProgram: true,
   },
   rules: {
+    '@typescript-eslint/no-empty-interface': ['warn'],
+    '@typescript-eslint/no-shadow': ['error'],
+    '@typescript-eslint/camelcase': 'off',
     'linebreak-style': 'off',
+    'no-shadow': 'off',
+    'react/self-closing-comp': ['warn'],
+    'react/prop-types': ['off'],
+    'import/prefer-default-export': ['off'],
     'prettier/prettier': [
       'error',
       {
         endOfLine: 'auto',
       },
     ],
-    // FIX ME: https://github.com/typescript-eslint/typescript-eslint/issues/2077
-    '@typescript-eslint/camelcase': 'off',
+    'jsx-a11y/label-has-associated-control': [
+      'error',
+      {
+        required: {
+          some: ['nesting', 'id'],
+        },
+      },
+    ],
+    'jsx-a11y/label-has-for': [
+      'error',
+      {
+        required: {
+          some: ['nesting', 'id'],
+        },
+      },
+    ],
+    'import/extensions': [
+      'error',
+      'ignorePackages',
+      {
+        js: 'never',
+        jsx: 'never',
+        ts: 'never',
+        tsx: 'never',
+      },
+    ],
   },
 };
