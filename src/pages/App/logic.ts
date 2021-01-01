@@ -51,6 +51,7 @@ export type LoadDetectedLocationParams = Omit<
   setCurrentLoc: React.Dispatch<
     React.SetStateAction<IWeatherLocSearch | undefined>
   >;
+  setNotifyMsg: React.Dispatch<React.SetStateAction<string | undefined>>;
   city: string;
   ip: string;
 };
@@ -58,6 +59,7 @@ export const loadDetectedLocation = async ({
   setLoading,
   setErrorMsg,
   setCurrentLoc,
+  setNotifyMsg,
   city,
   ip,
 }: LoadDetectedLocationParams): Promise<void> => {
@@ -68,8 +70,8 @@ export const loadDetectedLocation = async ({
       const locations = await fetchLoc({ queryName: city });
 
       if (!locations?.length)
-        throw new Error(
-          `Cannot found forecast report for detected location: ${city} - from IP: ${ip}.\n Please try to use search.`
+        setNotifyMsg(
+          `Not found forecast for detected location: ${city} - by IP: ${ip}.\n Please try to use search.`
         );
 
       setCurrentLoc(locations[0]);
@@ -102,27 +104,28 @@ export const fetchCurrentLocWeather = async ({
 
 export type OnSearchParams = Omit<IFetchHandlerParams, 'callback'> & {
   setWeather: React.Dispatch<React.SetStateAction<IWeatherLoc | undefined>>;
+  setNotifyMsg: React.Dispatch<React.SetStateAction<string | undefined>>;
 };
 export const onSearch = ({
   setLoading,
   setErrorMsg,
   setWeather,
+  setNotifyMsg,
 }: OnSearchParams) => async (
   event: React.FormEvent<HTMLInputElement>
 ): Promise<void> => {
+  setNotifyMsg('');
   await fetchHandler({
     setLoading,
     setErrorMsg,
     callback: async () => {
-      const queryName = event.currentTarget.value;
-      console.log(
-        '🚀 ~ file: logic.ts ~ line 118 ~ callback: ~ queryName',
-        queryName
-      );
+      const queryName = (event.target as HTMLInputElement).value;
 
       if (!queryName) return;
+      setWeather(undefined);
 
-      const locations = await fetchLoc({ queryName });
+      const encodedQuery = encodeURIComponent(queryName);
+      const locations = await fetchLoc({ queryName: encodedQuery });
       if (!locations?.length) throw new Error(EApiMessages.NOT_FOUND);
 
       const firstLocWoeId = locations[0]?.woeid;

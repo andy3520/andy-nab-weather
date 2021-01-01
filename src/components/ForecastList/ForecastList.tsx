@@ -24,11 +24,10 @@ const ForecastList: React.FC<IForecastListProps> = ({
 
   return (
     <div className="flex flex-wrap items-center justify-between -m-2">
-      {consolidatedWeathers.map(
+      {consolidatedWeathers?.map(
         (consolidatedWeather: IConsolidatedWeather, idx: number) => (
-          <div className="p-2">
+          <div className="p-2" key={consolidatedWeather.id}>
             <ForecastItem
-              key={consolidatedWeather.id}
               onChangeCurrentWeatherIndex={onChangeCurrentWeatherIndex(
                 idx,
                 setCurrentWeatherIndex

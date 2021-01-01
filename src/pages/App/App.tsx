@@ -1,19 +1,20 @@
 import React from 'react';
+import './App.scss';
+import { ReactComponent as GithubIcon } from './github.svg';
+import { ReactComponent as TwitterIcon } from './twitter.svg';
+import { ReactComponent as LoaderIcon } from './loader.svg';
 import ForecastCard from '../../components/ForecastCard';
 import ForecastList from '../../components/ForecastList';
 import LocationSearch from '../../components/LocationSearch';
 import Notify from '../../components/Notify/Notify';
 import { IIPInfo, IWeatherLoc, IWeatherLocSearch } from '../../types';
-import './App.scss';
-import { ReactComponent as GithubIcon } from './github.svg';
+import { EApiMessages } from '../../constants/api';
 import {
   detectLoc,
   fetchCurrentLocWeather,
   loadDetectedLocation,
   onSearch,
 } from './logic';
-import { ReactComponent as TwitterIcon } from './twitter.svg';
-import { EApiMessages } from '../../constants/api';
 
 const App: React.FC = () => {
   const [ipLoc, setIPLoc] = React.useState<IIPInfo>();
@@ -37,31 +38,23 @@ const App: React.FC = () => {
   }, []);
 
   React.useEffect(() => {
-    if (ipLoc && (!ipLoc.city || !ipLoc.ip)) {
+    if (!ipLoc?.city || !ipLoc?.ip) {
       setNotifyType('info');
       setNotifyMsg(EApiMessages.CANNOT_DETECT_LOCATION);
       return;
     }
 
-    if (ipLoc?.city && ipLoc?.ip) {
-      setNotifyType('info');
-      setNotifyMsg(`Detected location: ${ipLoc.city} from ip ${ipLoc.ip}`);
-      loadDetectedLocation({
-        setLoading,
-        setErrorMsg,
-        setCurrentLoc,
-        city: ipLoc.city,
-        ip: ipLoc.ip,
-      });
-    }
+    setNotifyType('info');
+    setNotifyMsg(`Detected location: ${ipLoc.city} from ip ${ipLoc.ip}`);
+    loadDetectedLocation({
+      setLoading,
+      setErrorMsg,
+      setCurrentLoc,
+      setNotifyMsg,
+      city: ipLoc.city,
+      ip: ipLoc.ip,
+    });
   }, [ipLoc]);
-
-  React.useEffect(() => {
-    if (errorMsg) {
-      setNotifyType('error');
-      setNotifyMsg(errorMsg);
-    }
-  }, [errorMsg]);
 
   React.useEffect(() => {
     if (currentLoc?.woeid) {
@@ -76,6 +69,11 @@ const App: React.FC = () => {
     }
   }, [currentLoc]);
 
+  React.useEffect(() => {
+    setNotifyType('error');
+    setNotifyMsg(errorMsg);
+  }, [errorMsg]);
+
   return (
     <div className="bg-gray-500">
       <div className="container">
@@ -86,25 +84,23 @@ const App: React.FC = () => {
                 Andy&apos;s Forecast
               </h1>
               <LocationSearch
-                isLoading={isLoading}
-                onSearch={onSearch({ setLoading, setErrorMsg, setWeather })}
+                onSearch={onSearch({
+                  setLoading,
+                  setErrorMsg,
+                  setWeather,
+                  setNotifyMsg,
+                })}
               />
             </header>
             <div className="px-4 py-5 sm:p-6">
-              {/* {isLoading && (
-                <div className="flex justify-center p-10">
-                  <img
-                    src="/static/images/weather/lc.svg"
-                    alt="Loading icon"
-                    className="w-20 h-20 animate-ping"
-                  />
-                </div>
-              )} */}
-
               {notifyMsg && (
                 <div className="mb-4">
                   <Notify type={notifyType} msg={notifyMsg} />
                 </div>
+              )}
+
+              {isLoading && (
+                <LoaderIcon className="w-20 h-20 text-indigo-600 animate-spin" />
               )}
 
               {weather && (
