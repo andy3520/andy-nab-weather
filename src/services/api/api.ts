@@ -1,6 +1,6 @@
 import fetch from 'isomorphic-fetch';
-import { EHTTPStatus, EApiMessages } from '../constants/api';
-import { IIPInfo, IWeatherLoc, IWeatherLocSearch } from '../types';
+import { EHTTPStatus, EApiMessages } from '../../constants/api';
+import { IIPInfo, IWeatherLoc, IWeatherLocSearch } from '../../types';
 
 const ROOT_URL = process.env.REACT_APP_ROOT_URL;
 const IP_ACCESS = process.env.REACT_APP_IP_ACCESS;

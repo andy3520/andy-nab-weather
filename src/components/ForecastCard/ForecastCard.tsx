@@ -1,7 +1,7 @@
 import React from 'react';
 import { WEATHER_STATES } from '../../constants/weather';
 import { DisplayWeatherDetail, IWeatherLoc } from '../../types';
-import { getRoundUp } from '../../utils/getRoundNum';
+import { getRoundNum } from '../../utils/getRoundNum';
 import { getWeekDay } from '../../utils/getWeekDay';
 
 export interface IForecastCardProps {
@@ -39,10 +39,10 @@ const ForecastCard: React.FC<IForecastCardProps> = ({
             {getWeekDay(applicable_date)} - {applicable_date}
           </p>
           <p className="font-bold uppercase text-7xl sm:text-9xl">
-            {getRoundUp(the_temp)}°
+            {getRoundNum(the_temp)}°
           </p>
           <p className="text-xl font-semibold text-gray-100 sm:text-2xl">
-            {getRoundUp(min_temp)}° &#8644; {getRoundUp(max_temp)}°
+            {getRoundNum(min_temp)}° &#8644; {getRoundNum(max_temp)}°
           </p>
         </div>
         <img

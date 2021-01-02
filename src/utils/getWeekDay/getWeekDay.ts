@@ -1,7 +1,7 @@
-import { WEEK_DAYS } from '../constants/weekDay';
+import { WEEK_DAYS } from '../../constants/weekDay';
 
 export const getWeekDay = (date: string): string => {
-  if (!date) return '';
+  if (!date || !Date.parse(date)) return '';
 
   const parsedDate = new Date(date);
   const weekDayIndex = parsedDate.getDay();

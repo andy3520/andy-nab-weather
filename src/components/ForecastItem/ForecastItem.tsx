@@ -1,7 +1,7 @@
 import React from 'react';
 import { WEATHER_STATES } from '../../constants/weather';
 import { DisplayWeatherDetail, IConsolidatedWeather } from '../../types';
-import { getRoundUp } from '../../utils/getRoundNum';
+import { getRoundNum } from '../../utils/getRoundNum';
 import { getWeekDay } from '../../utils/getWeekDay';
 
 export interface IForecastItemProps {
@@ -38,7 +38,7 @@ const ForecastItem: React.FC<IForecastItemProps> = ({
         </p>
         <p className="text-xs text-gray-200">{applicable_date}</p>
         <div className="flex items-center justify-between">
-          <p className="text-3xl font-bold">{getRoundUp(the_temp)}°</p>
+          <p className="text-3xl font-bold">{getRoundNum(the_temp)}°</p>
           <img
             title={weatherState}
             src={srcWeatherIcon}
@@ -47,7 +47,7 @@ const ForecastItem: React.FC<IForecastItemProps> = ({
           />
         </div>
         <p className="text-sm text-gray-100">
-          {getRoundUp(min_temp)}° &#8644; {getRoundUp(max_temp)}°
+          {getRoundNum(min_temp)}° &#8644; {getRoundNum(max_temp)}°
         </p>
       </div>
     </button>

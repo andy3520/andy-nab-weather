@@ -2,8 +2,8 @@ export const ROOT_URL = process.env.REACT_APP_ROOT_URL;
 
 export enum EHTTPStatus {
   OK = 200,
-  NOT_FOUND = 400,
-  LIMIT_EXCEED = 429,
+  NOT_FOUND = 404,
+  LIMIT_EXCEED = 104,
 }
 
 export enum EApiMessages {
