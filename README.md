@@ -1,5 +1,7 @@
 # Andy's Forecast
 
+## Demo: https://amazing-wright-1ccf5a.netlify.app/
+
 ## Preview
 
 ![App Preview](./docs/images/app.png 'App UI')
@@ -39,7 +41,8 @@
 1. React (Typescript, Hooks)
 1. TailwindCSS
 1. Jest, react-testing-library
+1. Netlify
 
 ## WARNING:
 
-- Detect location by ip api have limit: `10,000req/month`
+- Detect location by ip api have limit: `10,000req/month` please register and get new access key at `http://ipstack.com`

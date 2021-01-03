@@ -1,0 +1,2 @@
+/api/* https://www.metaweather.com/:splat
+/check/* http://api.ipstack.com/:splat
