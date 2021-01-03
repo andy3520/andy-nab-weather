@@ -1,2 +1,2 @@
-/api/* https://www.metaweather.com/:splat
-/check/* http://api.ipstack.com/:splat
+/api/* https://www.metaweather.com/:splat 200
+/check/* http://api.ipstack.com/:splat 200
