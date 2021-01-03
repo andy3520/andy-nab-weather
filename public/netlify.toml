@@ -12,7 +12,8 @@
 
 [[redirects]]
   from = "/check/*"
-  to = "http://api.ipstack.com/check/:splat"
+  to = "http://api.ipstack.com/check"
+  query = {access_key = ":access_key"}
   status = 200
   force = true
   headers = {X-From = "Netlify", Access-Control-Allow-Origin = "*"}
