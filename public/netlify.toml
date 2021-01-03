@@ -1,18 +1,18 @@
 [[headers]]
   for = "/*"
   [headers.values]
-    Access-Control-Allow-Origin = "**"
+    Access-Control-Allow-Origin = "*"
 
 [[redirects]]
   from = "/api/*"
-  to = "https://www.metaweather.com/:splat"
+  to = "https://www.metaweather.com/api/:splat"
   status = 200
   force = true
   headers = {X-From = "Netlify", Access-Control-Allow-Origin = "*"}
 
 [[redirects]]
   from = "/check/*"
-  to = "http://api.ipstack.com/:splat"
+  to = "http://api.ipstack.com/check/:splat"
   status = 200
   force = true
   headers = {X-From = "Netlify", Access-Control-Allow-Origin = "*"}
