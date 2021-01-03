@@ -7,7 +7,6 @@ export interface INotifyProps {
 
 export const NOTIFY_CLASS_NAME = {
   info: 'bg-indigo-200 text-indigo-600',
-  success: 'bg-green-200 text-green-600',
   error: 'bg-red-200 text-red-600',
 };
 

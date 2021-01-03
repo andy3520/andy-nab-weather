@@ -12,19 +12,22 @@ export const fetchHandler = async ({
   setLoading,
   setErrorMsg,
   callback,
-}: IFetchHandlerParams): Promise<void> => {
+}: IFetchHandlerParams): Promise<0 | 1> => {
   setErrorMsg('');
   setLoading(true);
 
   try {
     if (callback && typeof callback === 'function') {
       await callback();
+      return 1;
     }
   } catch (error) {
     setErrorMsg(error?.message);
   } finally {
     setLoading(false);
   }
+
+  return 0;
 };
 
 export type DetectLocationParams = Omit<IFetchHandlerParams, 'callback'> & {

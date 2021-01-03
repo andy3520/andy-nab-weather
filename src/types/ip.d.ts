@@ -1,18 +1,18 @@
 export interface IIPInfo {
-  ip: string;
-  hostname: string;
-  type: string;
-  continent_code: string;
-  continent_name: string;
-  country_code: string;
-  country_name: string;
-  region_code: string;
-  region_name: string;
-  city: string;
-  latitude: number;
-  longitude: number;
-  location: IIPLoc;
-  zip: string;
+  ip: string | null;
+  hostname?: string | null;
+  type: string | null;
+  continent_code: string | null;
+  continent_name: string | null;
+  country_code: string | null;
+  country_name: string | null;
+  region_code: string | null;
+  region_name: string | null;
+  city: string | null;
+  latitude: number | null;
+  longitude: number | null;
+  location: IIPLoc | null;
+  zip: string | null;
 }
 
 export interface IIPLoc {

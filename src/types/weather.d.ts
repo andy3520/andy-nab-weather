@@ -3,7 +3,6 @@ export interface IWeatherLocSearch {
   location_type: string;
   latt_long: string;
   woeid: number;
-  distance: number;
 }
 
 export interface IWeatherLoc {
@@ -17,7 +16,8 @@ export interface IWeatherLoc {
   timezone_name: string;
   parent: IParent;
   consolidated_weather: Array<IConsolidatedWeather>;
-  sources: ISource;
+  sources: ISource[];
+  timezone: string;
 }
 
 export interface IParent {
@@ -54,11 +54,14 @@ export interface IConsolidatedWeather {
   humidity: number;
   visibility: number;
   predictability: number;
+  created: string;
 }
 
 export interface ISource {
   title: string;
   url: string;
+  slug: string;
+  crawl_rate: number;
 }
 
 export type DisplayWeatherDetail = Pick<

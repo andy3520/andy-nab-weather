@@ -1,0 +1,370 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ForecastList should match snapshot 1`] = `
+<DocumentFragment>
+  <div
+    class="flex flex-wrap items-center justify-between -m-2"
+  >
+    <div
+      class="p-2"
+      data-testid="ForecastList_ITEM"
+    >
+      <button
+        class="flex-1 p-4 rounded-lg shadow bg-gradient-to-r from-indigo-500 to-blue-400 hover:from-indigo-400 hover:to-blue-300 focus:from-indigo-400 focus: focus:to-blue-300 focus:ring-4 focus:ring-indigo-200 focus:outline-none"
+        data-testid="ForecastItem_BUTTON"
+        type="button"
+      >
+        <div
+          class="flex flex-col items-center justify-center text-white"
+        >
+          <p
+            class="font-semibold text-gray-100"
+            data-testid="ForecastItem_WEEK_DAY"
+          >
+            Friday
+          </p>
+          <p
+            class="text-xs text-gray-200"
+            data-testid="ForecastItem_DATE"
+          >
+            2021-01-01
+          </p>
+          <div
+            class="flex items-center justify-between"
+          >
+            <p
+              class="text-3xl font-bold"
+              data-testid="ForecastItem_THE_TEMP"
+            >
+              28°
+            </p>
+            <img
+              alt="Heavy Cloud icon"
+              class="ml-2 w-7 h-7"
+              data-testid="ForecastItem_IMAGE"
+              src="/static/images/weather/hc.svg"
+              title="Heavy Cloud"
+            />
+          </div>
+          <p
+            class="text-sm text-gray-100"
+          >
+            <span
+              data-testid="ForecastItem_MIN_TEMP"
+            >
+              21
+            </span>
+            ° ⇄ 
+            <span
+              data-testid="ForecastItem_MAX_TEMP"
+            >
+              29
+            </span>
+            °
+          </p>
+        </div>
+      </button>
+    </div>
+    <div
+      class="p-2"
+      data-testid="ForecastList_ITEM"
+    >
+      <button
+        class="flex-1 p-4 rounded-lg shadow bg-gradient-to-r from-indigo-500 to-blue-400 hover:from-indigo-400 hover:to-blue-300 focus:from-indigo-400 focus: focus:to-blue-300 focus:ring-4 focus:ring-indigo-200 focus:outline-none"
+        data-testid="ForecastItem_BUTTON"
+        type="button"
+      >
+        <div
+          class="flex flex-col items-center justify-center text-white"
+        >
+          <p
+            class="font-semibold text-gray-100"
+            data-testid="ForecastItem_WEEK_DAY"
+          >
+            Staturday
+          </p>
+          <p
+            class="text-xs text-gray-200"
+            data-testid="ForecastItem_DATE"
+          >
+            2021-01-02
+          </p>
+          <div
+            class="flex items-center justify-between"
+          >
+            <p
+              class="text-3xl font-bold"
+              data-testid="ForecastItem_THE_TEMP"
+            >
+              30°
+            </p>
+            <img
+              alt="Heavy Cloud icon"
+              class="ml-2 w-7 h-7"
+              data-testid="ForecastItem_IMAGE"
+              src="/static/images/weather/hc.svg"
+              title="Heavy Cloud"
+            />
+          </div>
+          <p
+            class="text-sm text-gray-100"
+          >
+            <span
+              data-testid="ForecastItem_MIN_TEMP"
+            >
+              22
+            </span>
+            ° ⇄ 
+            <span
+              data-testid="ForecastItem_MAX_TEMP"
+            >
+              30
+            </span>
+            °
+          </p>
+        </div>
+      </button>
+    </div>
+    <div
+      class="p-2"
+      data-testid="ForecastList_ITEM"
+    >
+      <button
+        class="flex-1 p-4 rounded-lg shadow bg-gradient-to-r from-indigo-500 to-blue-400 hover:from-indigo-400 hover:to-blue-300 focus:from-indigo-400 focus: focus:to-blue-300 focus:ring-4 focus:ring-indigo-200 focus:outline-none"
+        data-testid="ForecastItem_BUTTON"
+        type="button"
+      >
+        <div
+          class="flex flex-col items-center justify-center text-white"
+        >
+          <p
+            class="font-semibold text-gray-100"
+            data-testid="ForecastItem_WEEK_DAY"
+          >
+            Sunday
+          </p>
+          <p
+            class="text-xs text-gray-200"
+            data-testid="ForecastItem_DATE"
+          >
+            2021-01-03
+          </p>
+          <div
+            class="flex items-center justify-between"
+          >
+            <p
+              class="text-3xl font-bold"
+              data-testid="ForecastItem_THE_TEMP"
+            >
+              30°
+            </p>
+            <img
+              alt="Showers icon"
+              class="ml-2 w-7 h-7"
+              data-testid="ForecastItem_IMAGE"
+              src="/static/images/weather/s.svg"
+              title="Showers"
+            />
+          </div>
+          <p
+            class="text-sm text-gray-100"
+          >
+            <span
+              data-testid="ForecastItem_MIN_TEMP"
+            >
+              23
+            </span>
+            ° ⇄ 
+            <span
+              data-testid="ForecastItem_MAX_TEMP"
+            >
+              32
+            </span>
+            °
+          </p>
+        </div>
+      </button>
+    </div>
+    <div
+      class="p-2"
+      data-testid="ForecastList_ITEM"
+    >
+      <button
+        class="flex-1 p-4 rounded-lg shadow bg-gradient-to-r from-indigo-500 to-blue-400 hover:from-indigo-400 hover:to-blue-300 focus:from-indigo-400 focus: focus:to-blue-300 focus:ring-4 focus:ring-indigo-200 focus:outline-none"
+        data-testid="ForecastItem_BUTTON"
+        type="button"
+      >
+        <div
+          class="flex flex-col items-center justify-center text-white"
+        >
+          <p
+            class="font-semibold text-gray-100"
+            data-testid="ForecastItem_WEEK_DAY"
+          >
+            Monday
+          </p>
+          <p
+            class="text-xs text-gray-200"
+            data-testid="ForecastItem_DATE"
+          >
+            2021-01-04
+          </p>
+          <div
+            class="flex items-center justify-between"
+          >
+            <p
+              class="text-3xl font-bold"
+              data-testid="ForecastItem_THE_TEMP"
+            >
+              31°
+            </p>
+            <img
+              alt="Light Rain icon"
+              class="ml-2 w-7 h-7"
+              data-testid="ForecastItem_IMAGE"
+              src="/static/images/weather/lr.svg"
+              title="Light Rain"
+            />
+          </div>
+          <p
+            class="text-sm text-gray-100"
+          >
+            <span
+              data-testid="ForecastItem_MIN_TEMP"
+            >
+              23
+            </span>
+            ° ⇄ 
+            <span
+              data-testid="ForecastItem_MAX_TEMP"
+            >
+              33
+            </span>
+            °
+          </p>
+        </div>
+      </button>
+    </div>
+    <div
+      class="p-2"
+      data-testid="ForecastList_ITEM"
+    >
+      <button
+        class="flex-1 p-4 rounded-lg shadow bg-gradient-to-r from-indigo-500 to-blue-400 hover:from-indigo-400 hover:to-blue-300 focus:from-indigo-400 focus: focus:to-blue-300 focus:ring-4 focus:ring-indigo-200 focus:outline-none"
+        data-testid="ForecastItem_BUTTON"
+        type="button"
+      >
+        <div
+          class="flex flex-col items-center justify-center text-white"
+        >
+          <p
+            class="font-semibold text-gray-100"
+            data-testid="ForecastItem_WEEK_DAY"
+          >
+            Tuesday
+          </p>
+          <p
+            class="text-xs text-gray-200"
+            data-testid="ForecastItem_DATE"
+          >
+            2021-01-05
+          </p>
+          <div
+            class="flex items-center justify-between"
+          >
+            <p
+              class="text-3xl font-bold"
+              data-testid="ForecastItem_THE_TEMP"
+            >
+              28°
+            </p>
+            <img
+              alt="Heavy Rain icon"
+              class="ml-2 w-7 h-7"
+              data-testid="ForecastItem_IMAGE"
+              src="/static/images/weather/hr.svg"
+              title="Heavy Rain"
+            />
+          </div>
+          <p
+            class="text-sm text-gray-100"
+          >
+            <span
+              data-testid="ForecastItem_MIN_TEMP"
+            >
+              24
+            </span>
+            ° ⇄ 
+            <span
+              data-testid="ForecastItem_MAX_TEMP"
+            >
+              31
+            </span>
+            °
+          </p>
+        </div>
+      </button>
+    </div>
+    <div
+      class="p-2"
+      data-testid="ForecastList_ITEM"
+    >
+      <button
+        class="flex-1 p-4 rounded-lg shadow bg-gradient-to-r from-indigo-500 to-blue-400 hover:from-indigo-400 hover:to-blue-300 focus:from-indigo-400 focus: focus:to-blue-300 focus:ring-4 focus:ring-indigo-200 focus:outline-none"
+        data-testid="ForecastItem_BUTTON"
+        type="button"
+      >
+        <div
+          class="flex flex-col items-center justify-center text-white"
+        >
+          <p
+            class="font-semibold text-gray-100"
+            data-testid="ForecastItem_WEEK_DAY"
+          >
+            Wednesday
+          </p>
+          <p
+            class="text-xs text-gray-200"
+            data-testid="ForecastItem_DATE"
+          >
+            2021-01-06
+          </p>
+          <div
+            class="flex items-center justify-between"
+          >
+            <p
+              class="text-3xl font-bold"
+              data-testid="ForecastItem_THE_TEMP"
+            >
+              30°
+            </p>
+            <img
+              alt="Heavy Rain icon"
+              class="ml-2 w-7 h-7"
+              data-testid="ForecastItem_IMAGE"
+              src="/static/images/weather/hr.svg"
+              title="Heavy Rain"
+            />
+          </div>
+          <p
+            class="text-sm text-gray-100"
+          >
+            <span
+              data-testid="ForecastItem_MIN_TEMP"
+            >
+              24
+            </span>
+            ° ⇄ 
+            <span
+              data-testid="ForecastItem_MAX_TEMP"
+            >
+              33
+            </span>
+            °
+          </p>
+        </div>
+      </button>
+    </div>
+  </div>
+</DocumentFragment>
+`;

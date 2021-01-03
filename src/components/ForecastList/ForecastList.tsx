@@ -3,8 +3,12 @@ import { IConsolidatedWeather, IWeatherLoc } from '../../types';
 import ForecastItem from '../ForecastItem';
 
 export interface IForecastListProps {
-  weather: IWeatherLoc;
+  weather: IWeatherLoc | undefined;
   setCurrentWeatherIndex: React.Dispatch<React.SetStateAction<number>>;
+}
+
+export enum EForecastListTestId {
+  ITEM = 'ForecastList_ITEM',
 }
 
 export const onChangeCurrentWeatherIndex = (
@@ -18,15 +22,19 @@ const ForecastList: React.FC<IForecastListProps> = ({
   weather,
   setCurrentWeatherIndex,
 }) => {
-  const consolidatedWeathers = weather?.consolidated_weather;
+  if (!weather) return null;
 
-  if (!consolidatedWeathers) return null;
+  const consolidatedWeathers = weather?.consolidated_weather;
 
   return (
     <div className="flex flex-wrap items-center justify-between -m-2">
       {consolidatedWeathers?.map(
         (consolidatedWeather: IConsolidatedWeather, idx: number) => (
-          <div className="p-2" key={consolidatedWeather.id}>
+          <div
+            className="p-2"
+            key={consolidatedWeather.id}
+            data-testid={EForecastListTestId.ITEM}
+          >
             <ForecastItem
               onChangeCurrentWeatherIndex={onChangeCurrentWeatherIndex(
                 idx,

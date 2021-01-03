@@ -1,0 +1,11 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Notify should match snapshot 1`] = `
+<DocumentFragment>
+  <div
+    class="bg-indigo-200 text-indigo-600 shadow px-4 py-5 sm:px-6 rounded-lg"
+  >
+    Officia sunt enim occaecat nostrud do commodo.
+  </div>
+</DocumentFragment>
+`;

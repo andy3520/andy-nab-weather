@@ -1,0 +1,72 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ForecastCard should match snapshot 1`] = `
+<DocumentFragment>
+  <div
+    class="px-4 py-5 rounded-lg shadow bg-gradient-to-br sm:bg-gradient-to-r from-indigo-600 to-blue-500 sm:px-6"
+  >
+    <div
+      class="flex flex-wrap items-center justify-center sm:justify-between"
+    >
+      <div
+        class="flex-1 text-white md:pr-6"
+      >
+        <h2
+          class="text-lg font-semibold sm:text-xl"
+          data-testid="ForecastCard_TITLE"
+        >
+          Ho Chi Minh City Weather
+        </h2>
+        <p
+          class="text-base text-gray-100 sm:text-lg"
+        >
+          <span
+            data-testid="ForecastCard_WEEK_DAY"
+          >
+            Friday
+          </span>
+           - 
+          <span
+            data-testid="ForecastCard_DATE"
+          >
+            2021-01-01
+          </span>
+        </p>
+        <p
+          class="font-bold uppercase text-7xl sm:text-9xl"
+        >
+          <span
+            data-testid="ForecastCard_THE_TEMP"
+          >
+            28
+          </span>
+          °
+        </p>
+        <p
+          class="text-xl font-semibold text-gray-100 sm:text-2xl"
+        >
+          <span
+            data-testid="ForecastCard_MIN_TEMP"
+          >
+            21
+          </span>
+          ° ⇄ 
+          <span
+            data-testid="ForecastCard_MAX_TEMP"
+          >
+            29
+          </span>
+          °
+        </p>
+      </div>
+      <img
+        alt="Heavy Cloud icon"
+        class="w-20 h-20 mt-6 sm:w-40 sm:h-40 sm:mt-0 animate-pulse"
+        data-testid="ForecastCard_IMAGE"
+        src="/static/images/weather/hc.svg"
+        title="Heavy Cloud"
+      />
+    </div>
+  </div>
+</DocumentFragment>
+`;

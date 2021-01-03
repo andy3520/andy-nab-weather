@@ -6,7 +6,7 @@ import { ReactComponent as LoaderIcon } from './loader.svg';
 import ForecastCard from '../../components/ForecastCard';
 import ForecastList from '../../components/ForecastList';
 import LocationSearch from '../../components/LocationSearch';
-import Notify from '../../components/Notify/Notify';
+import Notify from '../../components/Notify';
 import { IIPInfo, IWeatherLoc, IWeatherLocSearch } from '../../types';
 import { EApiMessages } from '../../constants/api';
 import {
@@ -14,7 +14,11 @@ import {
   fetchCurrentLocWeather,
   loadDetectedLocation,
   onSearch,
-} from './logic';
+} from './app.func';
+
+export enum EAppTestId {
+  LOADER = 'App_LOADER',
+}
 
 const App: React.FC = () => {
   const [ipLoc, setIPLoc] = React.useState<IIPInfo>();
@@ -100,7 +104,10 @@ const App: React.FC = () => {
               )}
 
               {isLoading && (
-                <LoaderIcon className="w-20 h-20 text-indigo-600 animate-spin" />
+                <LoaderIcon
+                  data-testid={EAppTestId.LOADER}
+                  className="w-20 h-20 text-indigo-600 animate-spin"
+                />
               )}
 
               {weather && (
@@ -122,21 +129,23 @@ const App: React.FC = () => {
             <footer className="px-4 py-4 sm:px-6">
               <div className="flex items-center justify-between">
                 <div className="font-mono text-sm font-semibold">
-                  NAB Assignment by Andy Nguyen
+                  NAB Assignment by Andy Nguyen with ❤️
                 </div>
                 <div className="flex">
                   <a
-                    href="/"
+                    href="https://twitter.com/annguyenhieuduc"
                     className="mr-4 text-gray-400 hover:text-gray-500"
                     target="_blank"
+                    rel="noreferrer"
                   >
                     <span className="sr-only">Twitter</span>
                     <TwitterIcon className="w-6 h-6" />
                   </a>
 
                   <a
-                    href="/"
+                    href="https://github.com/andy3520/andy-nab-weather"
                     target="_blank"
+                    rel="noreferrer"
                     className="text-gray-400 hover:text-gray-500"
                   >
                     <span className="sr-only">GitHub</span>

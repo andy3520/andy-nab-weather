@@ -1,0 +1,38 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`LocationSearch should match snapshot 1`] = `
+<DocumentFragment>
+  <div
+    class="w-full max-w-lg lg:max-w-xs"
+  >
+    <label
+      class="sr-only"
+      for="search"
+    >
+      Search
+    </label>
+    <div
+      class="relative"
+    >
+      <div
+        class="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none"
+      >
+        <svg
+          class="w-5 h-5 text-gray-400"
+          data-testid="LocationSearch_ICON"
+        >
+          search.svg
+        </svg>
+      </div>
+      <input
+        class="block w-full py-2 pl-10 pr-3 leading-5 placeholder-gray-500 bg-white border border-gray-300 rounded-md focus:outline-none focus:placeholder-gray-400 focus:ring-1 focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
+        data-testid="LocationSearch_INPUT"
+        id="search"
+        name="search"
+        placeholder="City name"
+        type="search"
+      />
+    </div>
+  </div>
+</DocumentFragment>
+`;

@@ -7,7 +7,7 @@
     "@tailwindcss/postcss7-compat": "^2.0.2",
     "@testing-library/jest-dom": "^5.11.4",
     "@testing-library/react": "^11.1.0",
-    "@testing-library/user-event": "^12.1.10",
+    "@testing-library/user-event": "^12.6.0",
     "@types/isomorphic-fetch": "^0.0.35",
     "@types/jest": "^26.0.15",
     "@types/node": "^12.0.0",
@@ -30,9 +30,29 @@
     "start": "craco start",
     "build": "craco build",
     "test": "craco test",
+    "test:coverage": "craco test --coverage",
     "eject": "react-scripts eject",
     "format": "prettier --write src/**/*.ts{,x}",
     "lint": "tsc --noEmit && eslint src/**/*.ts{,x}"
+  },
+  "jest": {
+    "coveragePathIgnorePatterns": [
+      "index.ts",
+      "index.tsx",
+      "serviceWorker.ts",
+      "reportWebVitals.ts",
+      "types",
+      "constants"
+    ],
+    "collectCoverageFrom": [
+      "src/**/*.{ts,tsx}"
+    ],
+    "coverageThreshold": {
+      "global": {
+        "lines": 90,
+        "statements": 90
+      }
+    }
   },
   "eslintConfig": {
     "extends": [
@@ -53,7 +73,10 @@
     ]
   },
   "devDependencies": {
+    "@testing-library/dom": "^7.29.0",
+    "@types/fetch-mock": "^7.3.3",
     "@types/lodash.debounce": "^4.0.6",
+    "@types/react-test-renderer": "^17.0.0",
     "@typescript-eslint/eslint-plugin": "^4.11.1",
     "@typescript-eslint/parser": "^4.11.1",
     "eslint": "^7.16.0",
@@ -66,6 +89,9 @@
     "eslint-plugin-prettier": "^3.3.0",
     "eslint-plugin-react": "^7.21.5",
     "eslint-plugin-react-hooks": "^4.2.0",
-    "prettier": "^2.2.1"
+    "fetch-mock": "^9.11.0",
+    "prettier": "^2.2.1",
+    "react-test-renderer": "^17.0.1",
+    "ts-jest": "^26.4.4"
   }
 }

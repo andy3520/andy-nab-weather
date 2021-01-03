@@ -31,6 +31,7 @@ module.exports = {
     createDefaultProgram: true,
   },
   rules: {
+    'import/first': 'off',
     '@typescript-eslint/no-empty-interface': ['warn'],
     '@typescript-eslint/no-shadow': ['error'],
     '@typescript-eslint/camelcase': 'off',
