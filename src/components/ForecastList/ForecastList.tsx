@@ -27,11 +27,15 @@ const ForecastList: React.FC<IForecastListProps> = ({
   const consolidatedWeathers = weather?.consolidated_weather;
 
   return (
-    <div className="flex flex-wrap items-center justify-between -m-2">
+    <div
+      className="grid items-center justify-between gap-6"
+      style={{
+        gridTemplateColumns: 'repeat(auto-fit, minmax(7rem, 1fr))',
+      }}
+    >
       {consolidatedWeathers?.map(
         (consolidatedWeather: IConsolidatedWeather, idx: number) => (
           <div
-            className="p-2"
             key={consolidatedWeather.id}
             data-testid={EForecastListTestId.ITEM}
           >

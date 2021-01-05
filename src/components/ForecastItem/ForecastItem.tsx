@@ -41,9 +41,9 @@ const ForecastItem: React.FC<IForecastItemProps> = ({
       data-testid={EForecastItemTestId.BUTTON}
       onClick={onChangeCurrentWeatherIndex}
       type="button"
-      className="flex-1 p-4 rounded-lg shadow bg-gradient-to-r from-indigo-500 to-blue-400 hover:from-indigo-400 hover:to-blue-300 focus:from-indigo-400 focus: focus:to-blue-300 focus:ring-4 focus:ring-indigo-200 focus:outline-none"
+      className="block w-full p-4 rounded-lg shadow bg-gradient-to-r from-indigo-500 to-blue-400 hover:from-indigo-400 hover:to-blue-300 focus:from-indigo-400 focus: focus:to-blue-300 focus:ring-4 focus:ring-indigo-200 focus:outline-none"
     >
-      <div className="flex flex-col items-center justify-center text-white">
+      <div className="flex flex-col items-center justify-center text-white min-w-max">
         <p
           className="font-semibold text-gray-100"
           data-testid={EForecastItemTestId.WEEK_DAY}
