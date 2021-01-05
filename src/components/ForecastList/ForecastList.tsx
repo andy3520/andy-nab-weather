@@ -28,7 +28,7 @@ const ForecastList: React.FC<IForecastListProps> = ({
 
   return (
     <div
-      className="grid items-center justify-between gap-6"
+      className="grid items-center justify-between gap-4 sm:gap-6"
       style={{
         gridTemplateColumns: 'repeat(auto-fit, minmax(7rem, 1fr))',
       }}

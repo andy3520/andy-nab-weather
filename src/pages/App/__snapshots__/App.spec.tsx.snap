@@ -134,22 +134,22 @@ exports[`App should match snapshot 1`] = `
               </div>
             </div>
             <div
-              class="mt-6"
+              class="mt-4 sm:mt-6"
             >
               <div
-                class="flex flex-wrap items-center justify-between -m-2"
+                class="grid items-center justify-between gap-4 sm:gap-6"
+                style="grid-template-columns: repeat(auto-fit, minmax(7rem, 1fr));"
               >
                 <div
-                  class="p-2"
                   data-testid="ForecastList_ITEM"
                 >
                   <button
-                    class="flex-1 p-4 rounded-lg shadow bg-gradient-to-r from-indigo-500 to-blue-400 hover:from-indigo-400 hover:to-blue-300 focus:from-indigo-400 focus: focus:to-blue-300 focus:ring-4 focus:ring-indigo-200 focus:outline-none"
+                    class="block w-full p-4 rounded-lg shadow bg-gradient-to-r from-indigo-500 to-blue-400 hover:from-indigo-400 hover:to-blue-300 focus:from-indigo-400 focus: focus:to-blue-300 focus:ring-4 focus:ring-indigo-200 focus:outline-none"
                     data-testid="ForecastItem_BUTTON"
                     type="button"
                   >
                     <div
-                      class="flex flex-col items-center justify-center text-white"
+                      class="flex flex-col items-center justify-center text-white min-w-max"
                     >
                       <p
                         class="font-semibold text-gray-100"
@@ -200,16 +200,15 @@ exports[`App should match snapshot 1`] = `
                   </button>
                 </div>
                 <div
-                  class="p-2"
                   data-testid="ForecastList_ITEM"
                 >
                   <button
-                    class="flex-1 p-4 rounded-lg shadow bg-gradient-to-r from-indigo-500 to-blue-400 hover:from-indigo-400 hover:to-blue-300 focus:from-indigo-400 focus: focus:to-blue-300 focus:ring-4 focus:ring-indigo-200 focus:outline-none"
+                    class="block w-full p-4 rounded-lg shadow bg-gradient-to-r from-indigo-500 to-blue-400 hover:from-indigo-400 hover:to-blue-300 focus:from-indigo-400 focus: focus:to-blue-300 focus:ring-4 focus:ring-indigo-200 focus:outline-none"
                     data-testid="ForecastItem_BUTTON"
                     type="button"
                   >
                     <div
-                      class="flex flex-col items-center justify-center text-white"
+                      class="flex flex-col items-center justify-center text-white min-w-max"
                     >
                       <p
                         class="font-semibold text-gray-100"
@@ -260,16 +259,15 @@ exports[`App should match snapshot 1`] = `
                   </button>
                 </div>
                 <div
-                  class="p-2"
                   data-testid="ForecastList_ITEM"
                 >
                   <button
-                    class="flex-1 p-4 rounded-lg shadow bg-gradient-to-r from-indigo-500 to-blue-400 hover:from-indigo-400 hover:to-blue-300 focus:from-indigo-400 focus: focus:to-blue-300 focus:ring-4 focus:ring-indigo-200 focus:outline-none"
+                    class="block w-full p-4 rounded-lg shadow bg-gradient-to-r from-indigo-500 to-blue-400 hover:from-indigo-400 hover:to-blue-300 focus:from-indigo-400 focus: focus:to-blue-300 focus:ring-4 focus:ring-indigo-200 focus:outline-none"
                     data-testid="ForecastItem_BUTTON"
                     type="button"
                   >
                     <div
-                      class="flex flex-col items-center justify-center text-white"
+                      class="flex flex-col items-center justify-center text-white min-w-max"
                     >
                       <p
                         class="font-semibold text-gray-100"
@@ -320,16 +318,15 @@ exports[`App should match snapshot 1`] = `
                   </button>
                 </div>
                 <div
-                  class="p-2"
                   data-testid="ForecastList_ITEM"
                 >
                   <button
-                    class="flex-1 p-4 rounded-lg shadow bg-gradient-to-r from-indigo-500 to-blue-400 hover:from-indigo-400 hover:to-blue-300 focus:from-indigo-400 focus: focus:to-blue-300 focus:ring-4 focus:ring-indigo-200 focus:outline-none"
+                    class="block w-full p-4 rounded-lg shadow bg-gradient-to-r from-indigo-500 to-blue-400 hover:from-indigo-400 hover:to-blue-300 focus:from-indigo-400 focus: focus:to-blue-300 focus:ring-4 focus:ring-indigo-200 focus:outline-none"
                     data-testid="ForecastItem_BUTTON"
                     type="button"
                   >
                     <div
-                      class="flex flex-col items-center justify-center text-white"
+                      class="flex flex-col items-center justify-center text-white min-w-max"
                     >
                       <p
                         class="font-semibold text-gray-100"
@@ -380,16 +377,15 @@ exports[`App should match snapshot 1`] = `
                   </button>
                 </div>
                 <div
-                  class="p-2"
                   data-testid="ForecastList_ITEM"
                 >
                   <button
-                    class="flex-1 p-4 rounded-lg shadow bg-gradient-to-r from-indigo-500 to-blue-400 hover:from-indigo-400 hover:to-blue-300 focus:from-indigo-400 focus: focus:to-blue-300 focus:ring-4 focus:ring-indigo-200 focus:outline-none"
+                    class="block w-full p-4 rounded-lg shadow bg-gradient-to-r from-indigo-500 to-blue-400 hover:from-indigo-400 hover:to-blue-300 focus:from-indigo-400 focus: focus:to-blue-300 focus:ring-4 focus:ring-indigo-200 focus:outline-none"
                     data-testid="ForecastItem_BUTTON"
                     type="button"
                   >
                     <div
-                      class="flex flex-col items-center justify-center text-white"
+                      class="flex flex-col items-center justify-center text-white min-w-max"
                     >
                       <p
                         class="font-semibold text-gray-100"
@@ -440,16 +436,15 @@ exports[`App should match snapshot 1`] = `
                   </button>
                 </div>
                 <div
-                  class="p-2"
                   data-testid="ForecastList_ITEM"
                 >
                   <button
-                    class="flex-1 p-4 rounded-lg shadow bg-gradient-to-r from-indigo-500 to-blue-400 hover:from-indigo-400 hover:to-blue-300 focus:from-indigo-400 focus: focus:to-blue-300 focus:ring-4 focus:ring-indigo-200 focus:outline-none"
+                    class="block w-full p-4 rounded-lg shadow bg-gradient-to-r from-indigo-500 to-blue-400 hover:from-indigo-400 hover:to-blue-300 focus:from-indigo-400 focus: focus:to-blue-300 focus:ring-4 focus:ring-indigo-200 focus:outline-none"
                     data-testid="ForecastItem_BUTTON"
                     type="button"
                   >
                     <div
-                      class="flex flex-col items-center justify-center text-white"
+                      class="flex flex-col items-center justify-center text-white min-w-max"
                     >
                       <p
                         class="font-semibold text-gray-100"

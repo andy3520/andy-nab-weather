@@ -118,7 +118,7 @@ const App: React.FC = () => {
               )}
 
               {weather && (
-                <div className="mt-6">
+                <div className="mt-4 sm:mt-6">
                   <ForecastList
                     weather={weather}
                     setCurrentWeatherIndex={setCurrentWeatherIndex}

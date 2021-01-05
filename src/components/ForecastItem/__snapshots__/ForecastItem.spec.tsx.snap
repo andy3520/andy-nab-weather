@@ -3,12 +3,12 @@
 exports[`ForecastItem should match snapshot 1`] = `
 <DocumentFragment>
   <button
-    class="flex-1 p-4 rounded-lg shadow bg-gradient-to-r from-indigo-500 to-blue-400 hover:from-indigo-400 hover:to-blue-300 focus:from-indigo-400 focus: focus:to-blue-300 focus:ring-4 focus:ring-indigo-200 focus:outline-none"
+    class="block w-full p-4 rounded-lg shadow bg-gradient-to-r from-indigo-500 to-blue-400 hover:from-indigo-400 hover:to-blue-300 focus:from-indigo-400 focus: focus:to-blue-300 focus:ring-4 focus:ring-indigo-200 focus:outline-none"
     data-testid="ForecastItem_BUTTON"
     type="button"
   >
     <div
-      class="flex flex-col items-center justify-center text-white"
+      class="flex flex-col items-center justify-center text-white min-w-max"
     >
       <p
         class="font-semibold text-gray-100"
